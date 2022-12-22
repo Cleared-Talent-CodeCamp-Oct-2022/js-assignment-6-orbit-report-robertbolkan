@@ -5,6 +5,7 @@ export class Satellite {
 	launchDate: string;
 	orbitType: string;
 	operational: boolean;
+	isDebris: boolean = false;
 
 	constructor(name: string, type: string, launchDate: string, orbitType: string, operational: boolean) {
 		this.name = name;
@@ -15,9 +16,14 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
+		if (this.type==="Space Debris"){
+		
 		return true;
+   } else {
+	this.isDebris = false;
+	return false
    }
 
 }
-
+}
 // TODO 3a: fix isSpaceDebris check
